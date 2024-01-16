@@ -1,0 +1,59 @@
+@import "vars";
+
+//desktop-first mixins
+@mixin mobile-sm {
+    @media screen and (max-width: #{$breakpoint-mobile-sm}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet-sm {
+    @media screen and (max-width: #{$breakpoint-tablet-sm}) {
+        @content;
+    }
+}
+
+@mixin tablet-md {
+    @media screen and (max-width: #{$breakpoint-tablet-md}) {
+        @content;
+    }
+}
+
+@mixin tablet-lg {
+    @media screen and (max-width: #{$breakpoint-tablet-lg}) {
+        @content;
+    }
+}
+
+@mixin desktop-sm {
+    @media screen and (max-width: #{$breakpoint-desktop-sm}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (max-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
+
+@mixin opacity-hover {
+    @media screen and (min-width: #{$breakpoint-tablet-md}) {
+        transition: 0.3s;
+        cursor: pointer;
+        
+        &:hover {
+            opacity: 0.62;
+        }
+    }
+}
+
+//OR
+//mobile-first mixins
+//TODO: add same mixins but for mobile-first

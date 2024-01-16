@@ -1,0 +1,7 @@
+build/**
+!.output/**
+assets/**
+public/**
+.eslintrc.js
+node_modules/**
+env/**
