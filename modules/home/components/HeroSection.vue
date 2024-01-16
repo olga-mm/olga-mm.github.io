@@ -18,9 +18,13 @@
 	&__row {
 		display: flex;
 		align-items: stretch;
+		height: 100vh;
+		max-height: 600px;
 
 		@include tablet-sm {
 			flex-direction: column;
+			height: auto;
+			max-height: none;
 		}
 	}
 
@@ -31,10 +35,11 @@
 		&.image-col {
 			background-image: url('/hero-bg.jpg');
 			background-size: cover;
-			background-position: center;
+			background-position: 50% 28%;
 
 			@include tablet-sm {
-				height: 80vw;
+				height: 80vh;
+				max-height: 480px;
 			}
 		}
 
