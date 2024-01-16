@@ -34,7 +34,7 @@ export default defineNuxtConfig({
 		},
 	},
 	modules: [
-		'nuxt-font-loader', 'nuxt-simple-sitemap',
+		'nuxt-font-loader',
 	],
 	//font-loader configuration could be added below
 });
