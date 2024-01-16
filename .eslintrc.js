@@ -24,7 +24,7 @@ module.exports = {
 		"quotes": "off",
 		"no-extra-semi": "error",
 		"no-trailing-spaces": "off",
-		"indent-empty-lines/indent-empty-lines": "warn",
+		"indent-empty-lines/indent-empty-lines": "off",
 		"@typescript-eslint/no-explicit-any": "off",
 		"@typescript-eslint/no-unused-vars": "off"
 	},

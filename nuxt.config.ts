@@ -6,17 +6,19 @@ export default defineNuxtConfig({
 			apiUrl: process.env.API_BASE_URL,
 		},
 	},
-	imports: {
-		autoImport: true,
-		dirs: ['stores'],
-	},
 	app: {
 		head: {
 			charset: 'utf-8',
-			viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+			viewport: 'width=device-width, initial-scale=1',
+			link: [
+				{
+					rel: 'stylesheet',
+					href: 'https://fonts.googleapis.com/css?family=Roboto:400,500,700'
+				}
+			]
 		},
 	},
-	css: ['~/assets/css/reset.css'],
+	css: ['~/assets/css/reset.css', '~/assets/css/grid.css'],
 	postcss: {
 		plugins: {
 			autoprefixer: {},
@@ -33,11 +35,6 @@ export default defineNuxtConfig({
 	},
 	modules: [
 		'nuxt-font-loader', 'nuxt-simple-sitemap',
-		['@pinia/nuxt',
-			{
-				autoImports: ['defineStore', 'acceptHMRUpdate'],
-			},
-		],
 	],
 	//font-loader configuration could be added below
 });
