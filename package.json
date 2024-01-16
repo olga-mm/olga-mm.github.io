@@ -15,7 +15,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .eslintignore .",
-    "lint-fix": "eslint --ext .js,.ts,.vue --ignore-path .eslintignore . --fix",
+    "lint-fix": "eslint --ext .js,.ts,.vue --ignore-path .eslintignore . --fix"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.52.0",
