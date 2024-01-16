@@ -7,7 +7,6 @@ export default defineNuxtConfig({
 		},
 	},
 	app: {
-		baseURL: '',
 		head: {
 			charset: 'utf-8',
 			viewport: 'width=device-width, initial-scale=1',
@@ -29,7 +28,7 @@ export default defineNuxtConfig({
 		css: {
 			preprocessorOptions: {
 				scss: {
-					additionalData: '@import "@/assets/scss/_mixins.scss"; @import "@/assets/scss/_vars.scss"; @import "@/assets/scss/_colors.scss";',
+					additionalData: '@import "@/assets/scss/index.scss";',
 				},
 			},
 		},
