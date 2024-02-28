@@ -17,6 +17,9 @@
 				li
 					b Курс "Журналістика і соцмережі"
 					span 2023 рік, 1 місяць
+				li
+					b "Основи АІ" від Google
+					span лютий 2024 рік
 </template>
 
 <script lang="ts" setup></script>
