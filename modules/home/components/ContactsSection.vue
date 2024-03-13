@@ -5,7 +5,7 @@
 			div.contacts__row
 				div
 					b Телефон:&nbsp;
-					a(href="tel:+38097004010") +380 97 004 010
+					a(href="tel:+380970040140") +380 97 004 0140
 				div
 					b Email:&nbsp;
 					a(href="mailto:olga-maltseva@ukr.net") olga-maltseva@ukr.net
