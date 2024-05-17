@@ -17,6 +17,14 @@ useHead({
 	title: "Мальцева Ольга - Копірайтер",
 	meta: [{name: "description", content: "Мальцева Ольга - Копірайтер"}],
 });
+
+onMounted(() => {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-7Y5MQZJTYF');
+});
 </script>
 
 <style lang="scss" scoped>

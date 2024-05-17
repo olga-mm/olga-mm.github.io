@@ -16,6 +16,12 @@ export default defineNuxtConfig({
 					rel: 'stylesheet',
 					href: 'https://fonts.googleapis.com/css?family=Roboto:400,500,700'
 				}
+			],
+			script: [
+				{
+					src: 'https://www.googletagmanager.com/gtag/js?id=G-7Y5MQZJTYF',
+					async: true,
+				},
 			]
 		},
 	},
