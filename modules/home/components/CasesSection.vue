@@ -43,8 +43,8 @@ const cases = [
 		title: "Bigmir.net",
 		description: "збір та аналіз новинних матеріалів з різних джерел, написання та редагування новинних статей з урахуванням креативних та SEO, планування та публікація новинних матеріалів на порталі, стеження за трендами та актуальними подіями для включення їх у стрічку новин",
 		links: [
-			"https://news.bigmir.net/ua/ukraine/7169045-nablyudaetsya-padenie-entuziazma-gumenyuk-o-mobilizatsii-v-ukraine",
-			"https://news.bigmir.net/ua/ukraine/7420056-zakonoproekt-o-mobilizatsii-v-rade-planiruyut-izmenit-normy-o-povestkakh-i-otsrochke"
+			"https://news.bigmir.net/ua/world/7518455-armiya-rossii-uskorila-prodvizhenie-vozle-avdeevki-britanskaya-razvedka",
+			"https://news.bigmir.net/ua/ukraine/9192708-rada-podnyala-shtrafy-za-neyavku-v-ttsk-i-otkaz-ot-povestki",
 		],
 	}
 ];
