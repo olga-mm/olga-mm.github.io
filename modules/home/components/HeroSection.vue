@@ -3,7 +3,7 @@
 		div.hero__row
 			div.hero__col.image-col
 			div.hero__col.text-col
-				h1 Портфоліо
+				h1 Резюме
 				h2 Мальцева Ольга
 				p Копірайтер, рерайтер, редактор новинної стрічки
 

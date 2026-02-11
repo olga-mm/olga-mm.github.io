@@ -1,8 +1,14 @@
 <template lang="pug">
 	section.contacts
-		div.container-sm
+		div.container
 			h2 Контакти
 			div.contacts__row
+				div
+					b Telegram:&nbsp;
+					span @olha_maltseva
+				div
+					b Instagram:&nbsp;
+					span @olha.maltseva
 				div
 					b Телефон:&nbsp;
 					a(href="tel:+380970040140") +380 97 004 0140
@@ -45,8 +51,13 @@
 		justify-content: space-between;
 		align-items: center;
 
+		@include tablet-md {
+			flex-direction: column;
+			gap: 24px;
+		}
+
 		b {
-			font-size: 18px;
+			font-size: 14px;
 			font-weight: 500;
 			margin-bottom: 16px;
 			text-align: center;
@@ -57,17 +68,20 @@
 		}
 
 		a {
-			font-size: 18px;
+			font-size: 14px;
 			margin-bottom: 16px;
 			color: $gray;
-			text-decoration: none;
-
-			@include tablet-md {
-				font-size: 20px;
-			}
+			text-decoration: underline;
 
 			&:hover {
 				color: $light-green;
+			}
+
+			span {
+				display: block;
+				font-size: 14px;
+				margin-bottom: 16px;
+				color: $gray;
 			}
 		}
 	}

@@ -6,7 +6,7 @@
 				li
 					b Київський університет імені Бориса Грінченка
 					span Інформаційна, бібліотечна та архівна справа, Київ, вища, з 2014 по 2019 (5 років)
-			h2 Додаткова освіта, курси
+			h3 Додаткова освіта, курси
 			ul
 				li
 					b Курс "SEO-спеціаліст"
@@ -28,7 +28,8 @@
 					span 2022 рік, 2 місяці
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+</script>
 
 <style lang="scss" scoped>
 .education {
@@ -52,6 +53,21 @@
 
 		@include mobile {
 			font-size: 32px;
+		}
+	}
+
+	h3 {
+		text-align: center;
+		font-size: 32px;
+		font-weight: 500;
+		margin-bottom: 36px;
+
+		@include tablet-md {
+			font-size: 24px;
+		}
+
+		@include mobile {
+			font-size: 16px;
 		}
 	}
 
