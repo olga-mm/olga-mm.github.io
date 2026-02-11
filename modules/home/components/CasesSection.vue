@@ -7,45 +7,35 @@
 					v-for="item in cases"
 					:key="item.title"
 				)
-					h3.cases__item-title {{ item.title }}
+					h3.cases__item-title
+						a(
+							v-if="item.link"
+							:href="item.link"
+							target="_blank"
+							rel="noopener noreferrer"
+						) {{ item.title }}
+						span(v-else) {{ item.title }}
 					p.cases__item-description {{ item.description }}
-					ul.cases__item-links
-						li(
-							v-for="link in item.links"
-							:key="link"
-						)
-							a(
-								:href="link"
-								target="_blank"
-								rel="noopener noreferrer"
-							) {{ link }}
 </template>
 
 <script setup lang="ts">
 const cases = [
 	{
 		title: "SDG Trade",
-		description: "наповнення сайту статтями, навчальним матеріалом, ведення блогу, e-mail-розсилка, підбір необхідних фото до матеріалів",
-		links: [
-			"https://sdg-trade.com/market/stati/zalog-uspexa-professionalnogo-trejdera",
-			"https://sdg-trade.com/market/stati/mozhno-li-obuchitsya-trejdingu-samostoyatelno"
-		],
+		description: "Комплексна робота з контентом фінансового проєкту. Займалася наповненням сайту експертними статтями та навчальними матеріалами для трейдерів різного рівня підготовки. Вела блог компанії: підбирала теми, готувала структуровані тексти з поясненнями складних фінансових термінів простою мовою. Також створювала e-mail-розсилки для залучення та утримання аудиторії, працювала з підбором і підготовкою візуального контенту (зображення, ілюстрації) відповідно до стилю сайту та матеріалів.",
 	},
 	{
 		title: "Loanexpert",
-		description: "наповнення сайту всією інформацією, робота з панеллю адміністратора, написання коментарів, тексти для блогу, інформативні тексти",
-		links: [
-			"https://vseokreditah.com.ua/pochemu-it-industriya-ukraine-mozhet-stat-privlekatelnoj-dlya-inostrannyh-investorov-v-2021-godu-innovatsii",
-			"https://loanexpert.net.ua/blog/kvartirnyj-vopros-pokupat-ili-arendovat/",
-		],
+		description: "Повне наповнення сайту інформаційним контентом із фінансової тематики. Працювала з адміністративною панеллю сайту, готувала та публікувала тексти для блогу, аналітичні й інформативні матеріали для користувачів. Описувала фінансові продукти та послуги, писала пояснювальні тексти й коментарі, адаптуючи складну інформацію під зрозумілий формат для широкої аудиторії. Особливу увагу приділяла структурі текстів, логіці подачі та корисності матеріалів.",
 	},
 	{
 		title: "Bigmir.net",
-		description: "збір та аналіз новинних матеріалів з різних джерел, написання та редагування новинних статей з урахуванням креативних та SEO, планування та публікація новинних матеріалів на порталі, стеження за трендами та актуальними подіями для включення їх у стрічку новин",
-		links: [
-			"https://news.bigmir.net/ua/world/7518455-armiya-rossii-uskorila-prodvizhenie-vozle-avdeevki-britanskaya-razvedka",
-			"https://news.bigmir.net/ua/ukraine/9192708-rada-podnyala-shtrafy-za-neyavku-v-ttsk-i-otkaz-ot-povestki",
-		],
+		description: "Робота у форматі новинного медіа. Займалася щоденним моніторингом інформаційних джерел, оперативним пошуком актуальних тем і подій. Писала та редагувала новинні матеріали з урахуванням редакційних стандартів і SEO-вимог. Працювала з заголовками, структурою текстів, фактчекінгом і швидкою публікацією матеріалів на порталі. Вела планування новинної стрічки, стежила за трендами та оперативно інтегрувала важливі події в контент сайту.",
+	},
+	{
+		title: "Лінія Інфо",
+		link: "https://liniya.info/",
+		description: "Створила новинний портал з нуля та виконувала обов’язки головного редактора. Відповідала за повний цикл роботи з контентом: планування, написання та редагування новин, управління командою, публікацію матеріалів на сайті. Займалася аналітикою трендів, моніторингом подій у реальному часі та адаптацією інформації для читачів. Забезпечувала якість текстів, дотримання стандартів журналістики та SEO, а також інтегрувала мультимедійний контент.",
 	}
 ];
 </script>
@@ -75,31 +65,23 @@ const cases = [
 	}
 
 	&__row {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40px;
 
 		@include tablet-md {
-			flex-direction: column;
-			align-items: center;
+			grid-template-columns: 1fr;
+			gap: 60px;
+			max-width: 420px;
+			margin: 0 auto;
 		}
 	}
 
 	&__item {
-		width: 33%;
-		max-width: 320px;
-
-		@include tablet-md {
-			width: 100%;
-			max-width: 420px;
-			margin-bottom: 40px;
-		}
-
 		&-title {
 			font-size: 24px;
 			font-weight: 500;
 			margin-bottom: 16px;
-			text-align: center;
 
 			@include tablet-md {
 				font-size: 20px;
@@ -108,10 +90,20 @@ const cases = [
 			@include mobile {
 				font-size: 18px;
 			}
+
+			a {
+				color: $dark-gray;
+				text-decoration: underline;
+				transition: color 0.3s ease-in-out;
+
+				&:hover {
+					color: $light-green;
+				}
+			}
 		}
 
 		&-description {
-			font-size: 16px;
+			font-size: 14px;
 			line-height: 1.3;
 			margin-bottom: 16px;
 		}
