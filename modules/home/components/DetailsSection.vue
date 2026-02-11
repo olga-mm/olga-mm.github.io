@@ -34,6 +34,8 @@
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/colors';
+
 .details {
 	background: $light-gray;
 	padding: 120px 0;
