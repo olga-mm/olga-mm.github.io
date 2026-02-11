@@ -27,6 +27,7 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss" scoped>
-
+<style>
+@import '@/assets/css/grid.css';
+@import '@/assets/css/reset.css';
 </style>
