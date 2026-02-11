@@ -22,6 +22,8 @@
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/index';
+
 .contacts {
 	padding: 100px 0;
 	background-color: #f5f5f5;

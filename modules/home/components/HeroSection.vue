@@ -14,6 +14,8 @@
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/index';
+
 .hero {
 	&__row {
 		display: flex;

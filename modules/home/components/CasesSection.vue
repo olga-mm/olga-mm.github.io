@@ -41,6 +41,8 @@ const cases = [
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/index';
+
 .cases {
 	padding: 120px 0;
 	color: $dark-gray;

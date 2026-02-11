@@ -32,6 +32,8 @@
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/index';
+
 .education {
 	background: $light-green;
 	color: $dark-gray;
