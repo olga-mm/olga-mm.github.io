@@ -25,7 +25,7 @@ export default defineNuxtConfig({
 			]
 		},
 	},
-	css: ['~/assets/css/reset.css', '~/assets/css/grid.css'],
+	css: ['./assets/css/reset.css', './assets/css/grid.css'],
 	postcss: {
 		plugins: {
 			autoprefixer: {},
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
 		css: {
 			preprocessorOptions: {
 				scss: {
-					additionalData: '@import "@/assets/scss/index.scss";',
+					additionalData: '@import "./assets/scss/index.scss";',
 				},
 			},
 		},
